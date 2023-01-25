@@ -12,6 +12,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'user_id',
         as: 'profile',
       });
+      this.belongsToMany(models.Role, {
+        through: 'UserRole',
+        as: 'roles',
+        foreignKey: 'user_id'
+      })
     }
   }
   User.init({
