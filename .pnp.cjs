@@ -685,7 +685,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["glob", "npm:8.1.0"],\
             ["fs.realpath", "npm:1.0.0"],\
             ["inflight", "npm:1.0.6"],\
-            ["inherits", "npm:2.0.4"],\
+            ["inherits", "npm:2.0.3"],\
             ["minimatch", "npm:5.1.6"],\
             ["once", "npm:1.4.0"]\
           ],\
@@ -719,7 +719,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["depd", "npm:1.1.2"],\
             ["inherits", "npm:2.0.3"],\
             ["setprototypeof", "npm:1.1.0"],\
-            ["statuses", "npm:1.5.0"]\
+            ["statuses", "npm:1.4.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -759,13 +759,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/inherits-npm-2.0.3-401e64b080-78cb8d7d85.zip/node_modules/inherits/",\
           "packageDependencies": [\
             ["inherits", "npm:2.0.3"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:2.0.4", {\
-          "packageLocation": "./.yarn/cache/inherits-npm-2.0.4-c66b3957a0-4a48a73384.zip/node_modules/inherits/",\
-          "packageDependencies": [\
-            ["inherits", "npm:2.0.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1538,13 +1531,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/statuses-npm-1.4.0-3efbe0a97f-a9e7fbd3bc.zip/node_modules/statuses/",\
           "packageDependencies": [\
             ["statuses", "npm:1.4.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:1.5.0", {\
-          "packageLocation": "./.yarn/cache/statuses-npm-1.5.0-f88f91b2e9-c469b9519d.zip/node_modules/statuses/",\
-          "packageDependencies": [\
-            ["statuses", "npm:1.5.0"]\
           ],\
           "linkType": "HARD"\
         }]\
