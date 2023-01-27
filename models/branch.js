@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.belongsTo(models.Company, {
-        foreignKey: 'company_id'
+        foreignKey: 'company_id',
       });
     }
   }

@@ -1,0 +1,18 @@
+<section>
+  <h2>Companies</h2>
+  <div style="display: flex; flex-direction: row, flex-wrap: wrap;">
+    {{!-- {{log companies}} --}}
+    {{#each companies}}
+    <div style="background: rgb(223, 223, 223); padding: 10px; border-radius: 8px; width: 400px;">
+      <p>{{ company_name }}</p>
+      <p>{{ company_address }}, {{ company_city }}</p>
+      <p>Branches:</p>
+      <ul>
+        {{#each branches}}
+          <li>{{ this }}</li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/each}}
+    </div>
+</section>

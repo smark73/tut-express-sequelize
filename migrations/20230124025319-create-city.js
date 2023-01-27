@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      prov_code: {
+      state_id: {
         type: Sequelize.STRING
       },
       city_name: {

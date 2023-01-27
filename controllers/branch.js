@@ -5,12 +5,24 @@ module.exports = {
   list(req, res) {
     return Branch
       .findAll({
-        include: [{
-          model: Company,
-          as: 'company'
-        }],
+        // include: [{
+        //   model: Company,
+        //   as: 'company'
+        // }],
       })
-      .then((branches) => res.status(200).send(branches))
+      .then((branches) => {
+        // res.status(200).send(branches)
+        const context = {
+          responseContext: branches.map(branch => {
+            return {
+              branch_name: branch.branch_name,
+              branch_address: branch.branch_address,
+              branch_city: branch.branch_city,
+            }
+          })
+        }
+        res.render('branches', { branches: context.responseContext })
+      })
       .catch((error) => { res.status(400).send(error); });
   },
 

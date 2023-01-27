@@ -12,13 +12,24 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('Branches', [{
-      branch_name: 'LV Branch',
-      branch_address: '123 Fake St',
-      branch_city: 'N Las Vegas',
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    }], {});
+    await queryInterface.bulkInsert('Branches', [
+      // {
+      //   company_id: 2,
+      //   branch_name: 'Fake Branch',
+      //   branch_address: '123 Fake St',
+      //   branch_city: 'N Las Vegas',
+      //   createdAt: new Date(),
+      //   updatedAt: new Date(),
+      // },
+      {
+        company_id: 2,
+        branch_name: 'Another Fake Branch',
+        branch_address: '456 Fake St',
+        branch_city: 'N Las Vegas',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+    ], {});
   },
 
   async down (queryInterface, Sequelize) {
@@ -29,7 +40,7 @@ module.exports = {
      * await queryInterface.bulkDelete('People', null, {});
      */
     await queryInterface.bulkDelete('Branches', [{
-      company_name: 'LV Branch',
+      branch_name: 'Fake Branch'
     }])
   }
 };

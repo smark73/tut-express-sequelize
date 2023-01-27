@@ -10,7 +10,27 @@ module.exports = {
           as: 'branches'
         }],
       })
-      .then((companies) => res.status(200).send(companies))
+      .then((companies) => {
+        // res.status(200).send(branches)
+        const context = {
+          responseContext: companies.map(co => {
+            // get branch names into array
+            let arrayOfBranches = [];
+            co.branches.map(b => {
+              arrayOfBranches.push(b.branch_name)
+            });
+
+            return {
+              company_name: co.company_name,
+              company_address: co.company_address,
+              company_city: co.company_city,
+              branches: arrayOfBranches
+            }
+          })
+        }
+        // res.send(context.responseContext);
+        res.render('companies', { companies: context.responseContext })
+      })
       .catch((error) => { res.status(400).send(error); });
   },
 

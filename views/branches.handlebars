@@ -1,0 +1,11 @@
+<section>
+  <h2>Branches</h2>
+  <div style="display: flex; flex-direction: row, flex-wrap: wrap;">
+    {{#each branches}}
+    <div style="background: rgb(223, 223, 223); padding: 10px; border-radius: 8px; width: 400px;">
+      <p>{{ branch_name}}</p>
+      <p>{{ branch_address}}, {{ branch_city}}</p>
+    </div>
+    {{/each}}
+    </div>
+</section>
