@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var cors = require('cors');
 // var cookieParser = require('cookie-parser');
 // var logger = require('morgan');
 const exphbs = require('express-handlebars')
@@ -8,6 +9,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+//cors
+app.use(cors());
 
 // handlebars
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }))

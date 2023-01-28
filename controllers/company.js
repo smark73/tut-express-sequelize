@@ -12,24 +12,41 @@ module.exports = {
       })
       .then((companies) => {
         // res.status(200).send(branches)
-        const context = {
-          responseContext: companies.map(co => {
-            // get branch names into array
-            let arrayOfBranches = [];
-            co.branches.map(b => {
-              arrayOfBranches.push(b.branch_name)
-            });
+        // let co = res.json(companies);
 
-            return {
-              company_name: co.company_name,
-              company_address: co.company_address,
-              company_city: co.company_city,
-              branches: arrayOfBranches
-            }
-          })
-        }
-        // res.send(context.responseContext);
-        res.render('companies', { companies: context.responseContext })
+       res.send(companies);
+
+        // const context = {
+        //   responseContext: companies.map(co => {
+        //     // get branch names into array
+        //     let arrayOfBranches = [];
+        //     co.branches.map(b => {
+        //       arrayOfBranches.push(b.branch_name)
+        //     });
+
+        //     return {
+        //       company_name: co.company_name,
+        //       company_address: co.company_address,
+        //       company_city: co.company_city,
+        //       branches: arrayOfBranches
+        //     }
+        //   })
+        // }
+        // res.send([
+        //   {
+        //     "company_name": "Fake Company",
+        //     "company_address": "123 Fake St",
+        //     "company_city": "N Las Vegas",
+        //     "branches": [
+        //       "Fake Branch",
+        //       "Another Fake Branch"
+        //     ]
+        //   }
+        // ])
+
+        // console.log('-------------', JSON.stringify(context.responseContext))
+        // res.send(JSON.stringify(context.responseContext));
+        // res.render('companies', { companies: context.responseContext })
       })
       .catch((error) => { res.status(400).send(error); });
   },
